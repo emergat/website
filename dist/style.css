@@ -17,7 +17,17 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 header { text-align: center; margin: 2rem 0 1.6rem; }
 h1 { margin: 0; font: 400 clamp(3.33rem,9.9vw,4.25rem)/1.05 "Protest Strike", sans-serif; letter-spacing: 0.32em; }
 header p { font-size: clamp(1.2rem,4vw,1.65rem); font-style: italic; margin: .45rem 0 1.45rem; }
-img { display: block; width: 100%; height: auto; border-radius: 2px; }
+main > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  --fade: clamp(12px, 3vw, 26px);
+  border-radius: var(--fade);
+  mask-image:
+    linear-gradient(to right, transparent, black var(--fade), black calc(100% - var(--fade)), transparent),
+    linear-gradient(to bottom, transparent, black var(--fade), black calc(100% - var(--fade)), transparent);
+  mask-composite: intersect;
+}
 article { max-width: 33rem; margin: 1.5rem auto; font-size: 1.15rem; }
 article p { margin: .9em 0; }
 article > p:nth-of-type(-n+2) { text-align: center; }
