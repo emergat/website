@@ -1,0 +1,13 @@
+public/
+tmp/
+.certs/
+.DS_Store
+resources/_gen/
+TODO
+.hugo_build.lock
+.checksums-*
+.checksums-diff-*
+res.txt
+CLAUDE.md
+randomseed_style_fingerprint_v1.1.json
+.openai/
